@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author anastasiya
  */
 public class Lab_2 {
-    private static boolean isPrime(int n) {
+    public static boolean isPrime(int n) {
     for(int i=2;i<n;i++) {
         if(n%i==0)
             return false;
@@ -19,7 +19,7 @@ public class Lab_2 {
     return true;
     }
     
-    private static int[] convertToBinary(int no){
+    public static int[] convertToBinary(int no){
     int container[] = new int[100];
     int i = 0;
     while (no > 0){
@@ -31,7 +31,7 @@ public class Lab_2 {
     return container;
     }
     
-    private static int todo(int n) {
+    public static int todo(int n) {
         
         ArrayList<Integer> numbers = new ArrayList(n);
                
