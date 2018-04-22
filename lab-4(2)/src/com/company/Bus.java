@@ -1,6 +1,6 @@
 package com.company;
 
-public class Bus extends Vehicle implements PassengerNavigator{
+public class Bus extends Vehicle<Human>{
     Bus(Integer capacity) { super(capacity);}
     public void insertPassenger(Human passenger) {
         if(this.freeSeats > 0) {
@@ -8,7 +8,7 @@ public class Bus extends Vehicle implements PassengerNavigator{
             this.passengers.add(passenger);
         } throw new Error("Vehicle capacity exceeded");
     }
-    public void ejextPassenger(Human passenger) {
+    public void ejectPassenger(Human passenger) {
         int passengerIndex = this.passengers.indexOf(passenger);
         if(passengerIndex == -1) {
             throw new Error("Passenger is not on board");

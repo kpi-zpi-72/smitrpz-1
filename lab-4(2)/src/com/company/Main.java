@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Integer capacity = 5;
         Integer counter;
-        EmergencyCar myFirstVehicle = new EmergencyCar(capacity);
+        PoliceCar myFirstVehicle = new PoliceCar(capacity);
         for(counter = 0; counter < capacity; counter++) {
             // write your code here
             UUID uuid = UUID.randomUUID();

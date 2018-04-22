@@ -1,6 +1,6 @@
 package com.company;
 
-public class PoliceCar extends Vehicle implements PassengerNavigator{
+public class PoliceCar extends Vehicle<Policeman>{
     PoliceCar(Integer capacity) {
         super(capacity);
     }
@@ -10,7 +10,7 @@ public class PoliceCar extends Vehicle implements PassengerNavigator{
             this.passengers.add(passenger);
         } throw new Error("Vehicle capacity exceeded");
     }
-    public void ejextPassenger(Policeman passenger) {
+    public void ejectPassenger(Policeman passenger) {
         int passengerIndex = this.passengers.indexOf(passenger);
         if(passengerIndex == -1) {
             throw new Error("Passenger is not on board");
